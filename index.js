@@ -11,7 +11,7 @@ import Blog from "./models/blog.js";
 import path from "path";
 import cors from "cors";
 const app = express();
-//const PORT = process.env.POST || 7000;
+const PORT = process.env.POST || 5000;
 
 mongoose
   .connect("mongodb://localhost:27017/blogify")
@@ -78,6 +78,6 @@ app.get(
 app.use("/user", UserRoutes);
 app.use("/blog", BlogRouters);
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("App is runing");
 });
