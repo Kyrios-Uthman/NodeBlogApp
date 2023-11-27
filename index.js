@@ -11,7 +11,7 @@ import Blog from "./models/blog.js";
 import path from "path";
 import cors from "cors";
 const app = express();
-const PORT = process.env.POST || 5000;
+const PORT = process.env.PORT || 5000;
 
 mongoose
   .connect("mongodb://localhost:27017/blogify")
